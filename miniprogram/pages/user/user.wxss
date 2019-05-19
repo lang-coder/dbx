@@ -1,0 +1,77 @@
+.user_header{
+  background-color: #FF6666;
+  height: 340rpx;
+  
+}
+.user_header .header_box{
+  padding: 40rpx 0 0 0;
+  
+}
+.user_header .header_box image{
+  display: block;
+  margin: 0 auto;
+  width: 130rpx;
+  height: 130rpx;
+  border: 12rpx #FF9999 solid;
+  border-radius: 50%;
+}
+.user_header .header_box button{
+  width: 240rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 40rpx;
+  display: block;
+  margin: 40rpx auto 0 auto;
+  background-color: white;
+  color: #6B6B6B;
+}
+.qiandao{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.qiandao text{
+  font-size: 36rpx;
+  color: white;
+}
+/* main */
+.user_main{
+  height: 702rpx;
+  margin: 30rpx;
+}
+.user_main .main_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_main .main_box:first-child{
+  border-bottom: 2rpx silver solid;
+}
+.user_main .main_box .box_item{
+  flex: 1;
+  height: 350rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user_main .main_box .box_item:first-child{
+  border-right: 2rpx silver solid;
+}
+.user_main .main_box .box_item image{
+  display: block;
+  width: 96rpx;
+  height: 96rpx;
+  margin: 0 auto;
+}
+.user_main .main_box .box_item text{
+  display: block;
+  text-align: center;
+  font-size: 32rpx;
+  color: #5E5E5E;
+  height: 80rpx;
+  line-height: 80rpx;
+}

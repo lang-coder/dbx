@@ -1,0 +1,49 @@
+.the_header{
+  margin: 20rpx 0 0 0;
+}
+.the_header text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+}
+.the_header image{
+  display: block;
+  width: 102rpx;
+  height: 102rpx;
+  margin: 20rpx auto 0 auto;
+}
+/* select_check */
+.select_check{
+  margin: 160rpx 0;
+}
+.select_check radio-group{
+  text-align: center;
+  line-height: 80rpx;
+}
+.select_check radio-group radio{
+  display: block;
+  font-size: 36rpx;
+}
+.select_check radio-group radio:nth-child(1){
+  color: #FF0000;
+}
+.select_check radio-group radio:nth-child(2){
+  color: #FF6600;
+}
+.select_check radio-group radio:nth-child(3){
+  color: #CC00CC;
+}
+/* select_button */
+.select_button{
+  margin: 0 100rpx;
+}
+.select_button button{
+  width: 344rpx;
+  height: 80rpx;
+  border: none;
+  border-radius: 40rpx;
+  background-color: #FF6666;
+  color: white;
+  font-size: 28rpx;
+}

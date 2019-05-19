@@ -1,0 +1,134 @@
+.the_header{
+  margin: 20rpx 0 0 0;
+}
+.the_header text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+}
+.the_header image{
+  display: block;
+  width: 102rpx;
+  height: 102rpx;
+  margin: 20rpx auto 0 auto;
+}
+.the_nav{
+  padding: 0 30rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.the_nav text{
+  flex: 1;
+  text-align: center;
+  height: 60rpx;
+  margin: 10rpx 60rpx;
+}
+.active{
+  color: #FF6600;
+  border-bottom: 2rpx #FF6600 solid;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.the_main{
+  margin: 10rpx 30rpx;
+  padding: 10rpx;
+  margin-top: 20rpx;
+  background-color: #F2F2F2;
+}
+.the_main text{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  color: #5E5E5E;
+  background-color: white;
+}
+.the_main textarea{
+  background-color: white;
+  height: 400rpx;
+  display: block;
+  width: 100%;
+}
+.the_main .yuyin{
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.the_main .yuyin button{
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: 50%;
+  width: 215rpx;
+  height: 215rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.the_main .yuyin image{
+  width: 210rpx;
+  height: 210rpx;
+  display: block;
+}
+.the_main .yuyin button:active{
+  border: 2px rgb(24, 252, 54) solid;
+  border-radius: 50%;
+}
+.the_check{
+  margin: 40rpx 120rpx;
+}
+.the_check radio-group{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.the_check radio-group radio{
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+}
+.the_check radio-group radio:first-child{
+  color: #FF0000;
+}
+.the_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.the_button button{
+  width: 400rpx;
+  background-color: #FF6666;
+  color: white;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 40rpx;
+}
+.the_btn{
+  /* width: 100%; */
+  margin: 20rpx 60rpx 0 0;
+}
+.the_btn button{
+  float: right;
+  display: flex;
+  align-items: center;
+  line-height: 26rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #FF66CC;
+  color: white;
+  font-size: 20rpx;
+  border: none;
+  border-radius: 40rpx;
+}

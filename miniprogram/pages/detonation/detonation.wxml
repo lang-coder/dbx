@@ -1,0 +1,42 @@
+<view class="the_header">
+  <text>点爆-抑制不住的心情</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="the_nav">
+  <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navber}}" 
+      data-index="{{index}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<form class="{{currentTab==0 ? 'show' : 'hide'}}">
+  <view class="the_main">
+    <text space="ensp">  我们在路上，点爆，让时间忘不掉你的脚步！</text>
+    <!-- 当点击输入时触发bindinput -->
+    <textarea bindinput="textInput" value="{{baotext.wtext}}" maxlength="-1"></textarea>
+  </view>
+  <view class="the_check">
+  <!-- 当点击值时触发bindchange -->
+    <radio-group bindchange="changeMood">
+      <radio checked="checked" value="红色">红色心情</radio>
+      <radio value="黑色">黑色心情</radio>
+    </radio-group>
+  </view>
+  <view class="the_button">
+    <button bindtap="detonation">点爆</button>
+  </view>
+</form>
+<form class="{{currentTab==1 ? 'show' : 'hide'}}">
+  <view class="the_main">
+    <text space="ensp">  我们在路上，点爆，让时间忘不掉你的脚步！</text>
+    <view class="yuyin">
+      <button bindtouchstart="touchdown" bindtouchend="touchup"><image src="/images/yuyin2.png" bindtap="ystart"></image></button>
+    </view>
+  </view>
+  <view class="the_check">
+    <radio-group bindchange="changeMoody">
+      <radio checked="checked">红色心情</radio>
+      <radio>黑色心情</radio>
+    </radio-group>
+  </view>
+  <view class="the_button">
+    <button bindtap="ydetonation">点爆</button>
+  </view>
+</form>

@@ -1,0 +1,46 @@
+.the_header{
+  margin: 20rpx 0 0 0;
+}
+.the_header text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+}
+.the_header image{
+  display: block;
+  width: 102rpx;
+  height: 102rpx;
+  margin: 20rpx auto 0 auto;
+}
+.button1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700rpx;
+}
+.button1 button{
+  width: 242rpx;
+  height: 242rpx;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.button1 button:active{
+  border: 4rpx rgb(0, 255, 128) solid;
+}
+.button1 image{
+  display: block;
+  margin: 0 auto;
+  width: 242rpx;
+  height: 242rpx;
+}
+.button1 image:active{
+  width: 260rpx;
+  height: 260rpx;
+}

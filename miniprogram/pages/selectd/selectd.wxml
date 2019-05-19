@@ -1,0 +1,10 @@
+<view class="the_header">
+  <text>疯狂点击</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="button1">
+  <button hover-start-time='100' hover-stay-time='1' bindtap='dianji'><image src="/images/button1.png"></image></button>
+</view>
+<view class="selectd_button">
+  <button disabled="{{disabled}}" bindtap="start">{{btext}}</button>
+</view>

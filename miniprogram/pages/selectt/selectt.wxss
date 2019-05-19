@@ -1,0 +1,90 @@
+.the_header{
+  margin: 20rpx 0 0 0;
+}
+.the_header text{
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+}
+.the_header image{
+  display: block;
+  width: 102rpx;
+  height: 102rpx;
+  margin: 20rpx auto 0 auto;
+}
+.button1{
+  width: 100%;
+  height: 560rpx;
+}
+.button1 .button1_tang{
+  margin: 0 0 0 40rpx;
+}
+.button1 .button1_tang label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 62rpx;
+  font-size: 36rpx;
+  color: #FF6633;
+  margin: 120rpx 0 30rpx 0;
+}
+.button1 .button1_tang label input{
+  display: block;
+  width: 340rpx;
+  height: 62rpx;
+  border: 2rpx #FF6633 solid;
+  padding-left: 4rpx;
+}
+.button1 .button1_tang>text{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 182rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #FF6666;
+  border: 2rpx #FF6666 solid;
+  margin-left: 480rpx;
+}
+.button1>text{
+  display: block;
+  color: white;
+  background-color: #FF9966;
+  height: 46rpx;
+  line-height: 46rpx;
+  width: 240rpx;
+  font-size: 28rpx;
+  margin: 320rpx auto 0 auto;
+  text-align: center;
+  border-radius: 14rpx;
+}
+.selectd_button{
+
+}
+.selectd_button button{
+  width: 344rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  background-color: #FF6666;
+  color: white;
+  border: none;
+  border-radius: 36rpx;
+}
+.the_btn{
+  /* width: 100%; */
+  margin: 20rpx 60rpx 0 0;
+}
+.the_btn button{
+  float: right;
+  display: flex;
+  align-items: center;
+  line-height: 26rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #FF66CC;
+  color: white;
+  font-size: 20rpx;
+  border: none;
+  border-radius: 40rpx;
+}

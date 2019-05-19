@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<block wx:if="{{detail.text}}">
+  <view class="the_top">
+    <view class="top_left">
+      <text space="ensp">性    别：</text>
+      <text>情绪颜色：</text>
+      <text>点爆类型：</text>
+      <text>点爆方式：</text>
+      <text>点爆时间：</text>
+    </view>
+    <view class="top_right">
+      <text>{{detail.gender}}</text>
+      <text>{{detail.wmood}}</text>
+      <text>文爆</text>
+      <text>{{detail.wway}}</text>
+      <text>{{detail.time}}</text>
+    </view>
+  </view>
+  <view class="the_mid">
+    <scroll-view scroll-y="true" scroll-x="false" scroll-with-animation="true">
+      <view>
+        <text>{{detail.text}}</text>
+      </view>
+      <block wx:if="{{detail.baofilename}}">
+        <view class="yuimage">
+          <image src="/images/yuyin4.png" bindtap="playtwo"></image>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+    <view class="the_button">
+    <button bindtap="boost">{{boostText}}</button>
+  </view>
+  <view class="the_bottom">
+    <view class="bottom_one">
+      <image src="/images/re.png"></image>
+      <text>{{temperature}}</text>
+    </view>
+    <view class="bottom_two" bindtap="collect">
+      <image src="{{collectimage}}"></image>
+      <text>{{collectText}}</text>
+    </view>
+  </view>
+</block>
+<block wx:if="{{detail.filename}}">
+  <view class="the_top">
+    <view class="top_left">
+      <text space="ensp">性    别：</text>
+      <text>情绪颜色：</text>
+      <text>点爆类型：</text>
+      <text>点爆方式：</text>
+      <text>点爆时间：</text>
+    </view>
+    <view class="top_right">
+      <text>{{detail.gender}}</text>
+      <text>{{detail.ymood}}</text>
+      <text>音爆</text>
+      <text>{{detail.yway}}</text>
+      <text>{{detail.time}}</text>
+    </view>
+  </view>
+  <view class="the_mid">
+    <view class="yuyin">
+      <image src="/images/yuyin3.png" class="image1 {{im1?'bb':''}}" bindtap="playone"></image>
+      <block wx:if="{{detail.baofilename}}">
+        <image src="/images/yuyin4.png" class="image2 {{im2?'bb':''}}" bindtap="playtwo"></image>
+      </block>
+    </view>
+  </view>
+  <view class="the_button">
+    <button bindtap="boost">{{boostText}}</button>
+  </view>
+  <view class="the_bottom">
+    <view class="bottom_one">
+      <image src="/images/re.png"></image>
+      <text>{{temperature}}</text>
+    </view>
+    <view class="bottom_two" bindtap="collect">
+      <image src="{{collectimage}}"></image>
+      <text>{{collectText}}</text>
+    </view>
+  </view>
+</block>

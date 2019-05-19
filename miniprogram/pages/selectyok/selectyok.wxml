@@ -1,0 +1,14 @@
+<view class="the_header">
+  <text>爆炸之音</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="button1">
+  <image src="/images/yuyin6.png" bindtap="play"></image>
+  <text>爆炸热度：{{wtemperature}}</text>
+</view>
+<view class="selectd_button">
+  <button bindtap="add">确定</button>
+</view>
+<view class="the_btn">
+    <button bindtap="seal">封存</button>
+</view>

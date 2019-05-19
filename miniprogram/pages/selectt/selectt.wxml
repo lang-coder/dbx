@@ -1,0 +1,19 @@
+<view class="the_header">
+  <text>糖果点爆</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="button1">
+  <view class="button1_tang">
+    <label>
+    糖果数量：<input type="number" value="{{t}}" bindinput="setSweet" maxlength="{{3}}"/>
+    </label>
+    <text>拥有糖果：{{userSweet}}</text>
+  </view>
+  <text>爆炸热度：{{wnum}}</text>
+</view>
+<view class="selectd_button">
+  <button bindtap="add">确定</button>
+</view>
+<view class="the_btn">
+    <button bindtap="seal">封存</button>
+</view>

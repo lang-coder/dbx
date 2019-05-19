@@ -1,0 +1,54 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/detonation/detonation",
+    "pages/user/user",
+    "pages/voicebao/voicebao",
+    "pages/selectbao/selectbao",
+    "pages/selecty/selecty",
+    "pages/selectyok/selectyok",
+    "pages/success/success",
+    "pages/selectd/selectd",
+    "pages/selectdok/selectdok",
+    "pages/selectt/selectt",
+    "pages/search/search",
+    "pages/detail/detail"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF3333",
+    "navigationBarTitleText": "我要点爆",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FF3333"
+  },
+  "tabBar": {
+    "backgroundColor": "#F2F2F2",
+    "color": "#6B6B6B",
+    "selectedColor": "#FF0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "世界",
+        "iconPath": "/images/shi.png",
+        "selectedIconPath": "/images/shi1.png"
+      },
+      {
+        "pagePath": "pages/detonation/detonation",
+        "text": "点爆",
+        "iconPath": "/images/bao2.png",
+        "selectedIconPath": "/images/bao1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/wo1.png",
+        "selectedIconPath": "/images/wo.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

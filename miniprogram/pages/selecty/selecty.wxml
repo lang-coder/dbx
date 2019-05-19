@@ -1,0 +1,7 @@
+<view class="the_header">
+  <text>爆炸之音</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="button1">
+  <button bindtouchstart="touchdown" bindtouchend="touchup"><image src="/images/yuyin5.png"></image></button>
+</view>

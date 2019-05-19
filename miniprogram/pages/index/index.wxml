@@ -1,0 +1,110 @@
+<!--index.wxml-->
+<view class="header">
+  <label>
+    <input type="text" bindtap="search"/>
+  </label>
+  <view class="navbar">
+      <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navber}}" 
+      data-index="{{index}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+</view>
+<scroll-view  class="content" scroll-y="true" scroll-top="{{scrollTop}}" 
+bindscrolltolower="thebottom" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+<view class="content_box">
+<!-- 推荐数据列表 -->
+  <view class="recommend {{currentTab==0 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
+    wx:for-item="recommend" wx:key="{{recommend._id}}" id="{{recommend._id}}">
+      <view class="citem_left">
+        <image src="/images/tou1.png"></image>
+      </view>
+      <block wx:if="{{recommend.text}}">
+        <view class="citem_mid">
+          <text>{{recommend.text}}</text>
+          <text>点爆方式：</text><text>{{recommend.wway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{recommend.temperature}}</text>
+        </view>
+      </block>
+      <block wx:if="{{recommend.filename}}">
+        <view class="citem_mid">
+          <image src="/images/yuyin.png"></image>
+          <text>点爆方式：</text><text>{{recommend.yway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{recommend.temperature}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 文爆 -->
+  <view class="textbao {{currentTab==1 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
+    wx:for-item="textbao" wx:key="{{textbao._id}}" id="{{textbao.detailId}}" wx:if="{{textbao.text}}">
+      <view class="citem_left">
+        <image src="/images/tou1.png"></image>
+      </view>
+      <view class="citem_mid">
+        <text>{{textbao.text}}</text>
+        <text>点爆方式：</text><text>{{textbao.wway}}</text>
+      </view>
+      <view class="citem_right">
+        <image src="/images/re.png"></image>
+        <text>{{textbao.temperature}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 音爆 -->
+  <view class="voicebao {{currentTab==2 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
+    wx:for-item="voicebao" wx:key="{{voicebao._id}}" id="{{voicebao.detailId}}" wx:if="{{voicebao.filename}}">
+      <view class="citem_left">
+        <image src="/images/tou1.png"></image>
+      </view>
+      <view class="citem_mid">
+        <image src="/images/yuyin.png"></image>
+        <text>点爆方式：</text><text>{{voicebao.yway}}</text>
+      </view>
+      <view class="citem_right">
+        <image src="/images/re.png"></image>
+        <text>{{voicebao.temperature}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 爆榜 -->
+  <view class="rankings {{currentTab==3 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{barray}}" 
+    wx:for-item="rankings" wx:key="{{rankings._id}}" id="{{rankings._id}}">
+      <view class="number">
+        {{index+1}}
+      </view>
+      <view class="citem_left">
+        <image src="/images/tou1.png"></image>
+      </view>
+      <block wx:if="{{rankings.text}}">
+        <view class="citem_mid">
+          <text>{{rankings.text}}</text>
+          <text>点爆方式：</text><text>{{rankings.wway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{rankings.temperature}}</text>
+        </view>
+      </block>
+      <block wx:if="{{rankings.filename}}">
+        <view class="citem_mid">
+          <image src="/images/yuyin.png"></image>
+          <text>点爆方式：</text><text>{{rankings.yway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{rankings.temperature}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+</scroll-view>

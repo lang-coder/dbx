@@ -1,0 +1,14 @@
+<view class="the_header">
+  <text>选择点爆方式</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="select_check">
+  <radio-group bindchange="selectway">
+    <radio checked='true' value='爆炸之音'>爆炸之音</radio>
+    <radio value='疯狂点击'>疯狂点击</radio>
+    <radio value='糖果点爆'>糖果点爆</radio>
+  </radio-group>
+</view>
+<view class="select_button">
+  <button bindtap="next">下一步</button>
+</view>

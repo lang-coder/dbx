@@ -1,0 +1,7 @@
+<view class="the_header">
+  <text>点爆成功</text>
+  <image src="/images/fencun.png"></image>
+</view>
+<view class="button1" bindtap="goindex">
+  <image src="/images/baook.png"></image>
+</view>
