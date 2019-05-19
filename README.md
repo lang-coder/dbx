@@ -1,12 +1,66 @@
-# 云开发 quickstart
+<h1>使用云开发进行微信小程序“我要点爆”的制作</h1><br/>
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+>接下来我将对“我要点爆”微信小程序进行完整的开源介绍
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+**小程序名称：**  我要点爆
 
-## 参考文档
+**查看方式：** 从“我要点爆”微信公众号打开，或直接扫描小程序码打开
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518213749861.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x300)
+**项目简介：**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“我要点爆”立足于解决当代人的情绪释放和情绪管理问题，通过情绪点爆的方式，使用文本与语音的形式记录情绪，通过点击、吼叫等方式将情绪释放点爆。用户通过不同的方式点爆后，系统通过独特的算法设计对点爆进行热度计算，为每一篇爆文提供一个热度值，同时爆文提供助爆、收藏、分享等功能。以微信小程序结合微信公众号为线上模式，充分利用微信生态系统的传播能力，同时为用户提供情绪记忆手册定做、情绪物品销售等服务。
+
+**效果图展示：**
+
+首页推荐样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214213467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+爆榜样式页
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214713634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+点爆-文字记录样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019051821484240.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+点爆-语音记录样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214900235.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+点爆方式选择页面样式页
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214917561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+疯狂点击点爆方式样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214934588.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+疯狂点击确认样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518215512259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+糖果点爆样式方式样式页面
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518214954220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+爆炸之音点爆方式样式页面
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518215019914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518215041142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+我的页面
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084859437.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+糖果签到样式页面
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190518215704783.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+点爆记录样式页面
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019051821573461.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+封存记录样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519083134434.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+爆文详情样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519083209505.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+搜索功能样式页
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519083322819.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70 =300x528)
+**其他展示：**
+
+云函数
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084002344.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084412155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70)
+页面文件目录
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084056166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70)
+数据库
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084449206.png)
+云存储
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190519084516544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4MDU5MjQ1,size_16,color_FFFFFF,t_70)
+
+
+素材文件：https://pan.baidu.com/s/17nWxK_mTPVm1zR2rpds2XA 
+提取码：h8b1 
+
+<br>
+<h4>至此，项目的介绍就到这里，接下来我们将使用云开发，从完成项目建立到发布全面讲解这个小程序。
