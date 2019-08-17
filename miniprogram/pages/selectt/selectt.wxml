@@ -5,9 +5,9 @@
 <view class="button1">
   <view class="button1_tang">
     <label>
-    糖果数量：<input type="number" value="{{t}}" bindinput="setSweet" maxlength="{{3}}"/>
+    糖果数量：<input type="number" value="{{t}}" bindinput="setTang" maxlength="{{3}}"/>
     </label>
-    <text>拥有糖果：{{userSweet}}</text>
+    <text>拥有糖果：{{userTang}}</text>
   </view>
   <text>爆炸热度：{{wnum}}</text>
 </view>
@@ -15,5 +15,5 @@
   <button bindtap="add">确定</button>
 </view>
 <view class="the_btn">
-    <button bindtap="seal">封存</button>
+    <button bindtap="fengcun">封存</button>
 </view>

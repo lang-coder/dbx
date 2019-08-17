@@ -11,13 +11,13 @@ Page({
     backgroundAudioManager.stop();
   },
   //开始计数
-  start: function () {
+  start: function() {
     //如果按钮为开始，进行开始的操作，否则跳转页面
-    if (this.data.btext == '开始') {
+    if(this.data.btext == '开始'){
       let ber = 60
       backgroundAudioManager.title = '点击'
       backgroundAudioManager.epname = '点击'
-      backgroundAudioManager.src = 'cloud://dbx-s55q1.6462-dbx-s55q1/bg/dianjif.mp3'
+      backgroundAudioManager.src = 'cloud://xiedong-87d8e0.7869-xiedong-87d8e0/bg/dianjif.mp3'
       //开始技术后让点击变为true可以记录值
       this.setData({
         btext: ber,
@@ -41,7 +41,7 @@ Page({
           })
         }
       }, 1000)
-    } else {
+    }else{
       //记录点击数量值到本地
       wx.setStorageSync('wnum', this.data.num)
       wx.navigateTo({
@@ -50,9 +50,9 @@ Page({
     }
   },
   //点击,当开始后才记录点击次数
-  dianji: function () {
+  dianji: function() {
     let n = this.data.num
-    if (this.data.dok) {
+    if(this.data.dok){
       n++
       this.setData({
         num: n

@@ -10,5 +10,5 @@
   <button bindtap="add">确定</button>
 </view>
 <view class="the_btn">
-    <button bindtap="seal">封存</button>
+    <button bindtap="fengcun">封存</button>
 </view>

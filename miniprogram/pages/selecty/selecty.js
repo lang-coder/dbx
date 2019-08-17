@@ -1,5 +1,7 @@
 //录音管理
 const recorderManager = wx.getRecorderManager()
+//音频组件控制
+const innerAudioContext = wx.createInnerAudioContext()
 var tempFilePath
 var sum = 0
 var sumt = 0;
@@ -19,9 +21,12 @@ Page({
     }
     //监听帧文件
     recorderManager.onFrameRecorded((res) => {
+      console.log('fb' + res)
       const { frameBuffer } = res
+      console.log('frameBuffer.byteLength', frameBuffer.byteLength)
       sum += frameBuffer.byteLength
       sumt++
+      console.log(sum+'=', sumt)
     })
     //开始录音
     recorderManager.start(options);
@@ -40,14 +45,15 @@ Page({
       mask: true
     })
     recorderManager.stop();
-    if (sumt > 10) {
+    if(sumt>10){
       var wn = (sum - 1500) / (sumt - 1) - 2300
-    } else {
+    }else{
       var wn = (sum - 1500) / (sumt - 1) - 3000
     }
+    console.log(parseInt(wn)+'---------')
     wx.setStorageSync('wnum', parseInt(wn))
-    sum = 0
-    sumt = 0
+    sum=0
+    sumt=0
     recorderManager.onStop((res) => {
       this.tempFilePath = res.tempFilePath
       console.log('停止录音', res.tempFilePath)
@@ -64,19 +70,19 @@ Page({
           // res.data 是包含以上定义的记录的数组
           console.log('查询用户:', res)
           //将名字定为id号+个数号+.mp3
-          var newbaovoice = res.data[0].baovoice + 1
-          var baofilename = wx.getStorageSync('openId') + newbaovoice + '.mp3'
+          var newbaoyuyin = res.data[0].baoyuyin + 1
+          var baofilename = wx.getStorageSync('openId') + newbaoyuyin + '.mp3'
           //调用云函数，修改爆语音数量，向云函数传值
           wx.cloud.callFunction({
-            name: 'updateBaovoice',
+            name: 'updateBaoyuyin',
             data: {
               openId: wx.getStorageSync('openId'),
-              baovoice: newbaovoice
+              baoyuyin: newbaoyuyin
             },
             success: res => {
               //上传录制的音频到云
               wx.cloud.uploadFile({
-                cloudPath: 'baovoice/' + baofilename,
+                cloudPath: 'baoyuyin/' + baofilename,
                 filePath: tempFilePath, // 文件路径
                 success: res => {
                   console.log(res.fileID)
@@ -105,10 +111,10 @@ Page({
         }
       })
     })
-    setTimeout((() => {
+    setTimeout((()=>{
       //关闭加载
       wx.hideLoading()
-    }), 4000)
+    }),4000)
   },
   onLoad: function () {
     wx.setNavigationBarTitle({

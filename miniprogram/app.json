@@ -2,18 +2,22 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
-    "pages/detonation/detonation",
+    "pages/userfengcun/userfengcun",
     "pages/user/user",
-    "pages/voicebao/voicebao",
-    "pages/selectbao/selectbao",
-    "pages/selecty/selecty",
+    "pages/userjilu/userjilu",
+    "pages/selectok/selectok",
     "pages/selectyok/selectyok",
-    "pages/success/success",
-    "pages/selectd/selectd",
-    "pages/selectdok/selectdok",
+    "pages/selecty/selecty",
     "pages/selectt/selectt",
-    "pages/search/search",
-    "pages/detail/detail"
+    "pages/selectdok/selectdok",
+    "pages/selectd/selectd",
+    "pages/selectbao/selectbao",
+    "pages/yuyinbao/yuyinbao",
+    "pages/detail/detail",
+    "pages/dianbao/dianbao",
+    "pages/detailcun/detailcun",
+    "pages/tangguo/tangguo",
+    "pages/sousuo/sousuo"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -37,7 +41,7 @@
         "selectedIconPath": "/images/shi1.png"
       },
       {
-        "pagePath": "pages/detonation/detonation",
+        "pagePath": "pages/dianbao/dianbao",
         "text": "点爆",
         "iconPath": "/images/bao2.png",
         "selectedIconPath": "/images/bao1.png"

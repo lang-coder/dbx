@@ -1,0 +1,39 @@
+<view class="header">
+  <label>
+    <input type="text" bindconfirm="sousuo" bindinput="shuru" 
+    confirm-type="search" focus="true"/>
+    <icon type="search" size="25" bindtap="sousuo"/>
+  </label>
+</view>
+<view class="content">
+  <text class="nohave {{bol ? 'show' : 'hide'}}">你搜的什么吖，我莫得！</text>
+<!-- 推荐数据列表 -->
+  <view class="tuijian">
+    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
+    wx:for-item="tuijian" wx:key="{{tuijian._id}}" id="{{tuijian._id}}">
+      <view class="citem_left">
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
+      </view>
+      <block wx:if="{{tuijian.wtext}}">
+        <view class="citem_mid">
+          <text>{{tuijian.wtext}}</text>
+          <text>点爆方式：</text><text>{{tuijian.wway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{tuijian.temperature}}</text>
+        </view>
+      </block>
+      <block wx:if="{{tuijian.filename}}">
+        <view class="citem_mid">
+          <image src="/images/yuyin.png"></image>
+          <text>点爆方式：</text><text>{{tuijian.yway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{tuijian.temperature}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

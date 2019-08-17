@@ -1,0 +1,52 @@
+<block wx:if="{{detail.wtext}}">
+  <view class="the_top">
+    <view class="top_left">
+      <text>情绪颜色：</text>
+      <text>点爆类型：</text>
+      <text>点爆方式：</text>
+      <text>点爆时间：</text>
+    </view>
+    <view class="top_right">
+      <text>{{detail.wmood}}</text>
+      <text>文爆</text>
+      <text>{{detail.wway}}</text>
+      <text>{{detail.wtime}}</text>
+    </view>
+  </view>
+  <view class="the_mid">
+    <scroll-view scroll-y="true" scroll-x="false" scroll-with-animation="true">
+      <view>
+        <text>{{detail.wtext}}</text>
+      </view>
+      <block wx:if="{{detail.baofilename}}">
+        <view class="yuimage">
+          <image src="/images/yuyin4.png" bindtap="playtwo"></image>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</block>
+<block wx:if="{{detail.filename}}">
+  <view class="the_top">
+    <view class="top_left">
+      <text>情绪颜色：</text>
+      <text>点爆类型：</text>
+      <text>点爆方式：</text>
+      <text>点爆时间：</text>
+    </view>
+    <view class="top_right">
+      <text>{{detail.ymood}}</text>
+      <text>音爆</text>
+      <text>{{detail.yway}}</text>
+      <text>{{detail.wtime}}</text>
+    </view>
+  </view>
+  <view class="the_mid">
+    <view class="yuyin">
+      <image src="/images/yuyin3.png" class="image1" bindtap="playone"></image>
+      <block wx:if="{{detail.baofilename}}">
+        <image src="/images/yuyin4.png" class="image2" bindtap="playtwo"></image>
+      </block>
+    </view>
+  </view>
+</block>

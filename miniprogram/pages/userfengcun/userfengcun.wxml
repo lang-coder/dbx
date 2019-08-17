@@ -1,0 +1,18 @@
+<view class="history">
+  <view class="history-date">
+    <view class="date_left">
+      <block wx:for="{{farray}}" 
+    wx:for-item="farray" wx:key="{{farray._id}}" id="{{farray._id}}">
+        <view>
+        <text>{{index+1}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="date_right">
+      <block wx:for="{{farray}}" 
+    wx:for-item="farray" wx:key="{{farray._id}}">
+        <text id="{{farray._id}}"  bindtap="goopen">{{farray.wtime}}</text>
+      </block>
+    </view>
+  </view>
+</view>

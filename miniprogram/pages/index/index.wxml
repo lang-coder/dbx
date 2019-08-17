@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="header">
   <label>
-    <input type="text" bindtap="search"/>
+    <input type="text" bindtap="shuru"/>
   </label>
   <view class="navbar">
       <text class="item {{currentTab==index ? 'active' : ''}}" wx:for="{{navber}}" 
@@ -12,96 +12,96 @@
 bindscrolltolower="thebottom" style="position:absolute; top:0; left:0; right:0; bottom:0;">
 <view class="content_box">
 <!-- 推荐数据列表 -->
-  <view class="recommend {{currentTab==0 ? 'show' : 'hide'}}">
+  <view class="tuijian {{currentTab==0 ? 'show' : 'hide'}}">
     <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
-    wx:for-item="recommend" wx:key="{{recommend._id}}" id="{{recommend._id}}">
+    wx:for-item="tuijian" wx:key="{{tuijian._id}}" id="{{tuijian._id}}">
       <view class="citem_left">
-        <image src="/images/tou1.png"></image>
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
       </view>
-      <block wx:if="{{recommend.text}}">
+      <block wx:if="{{tuijian.wtext}}">
         <view class="citem_mid">
-          <text>{{recommend.text}}</text>
-          <text>点爆方式：</text><text>{{recommend.wway}}</text>
+          <text>{{tuijian.wtext}}</text>
+          <text>点爆方式：</text><text>{{tuijian.wway}}</text>
         </view>
         <view class="citem_right">
           <image src="/images/re.png"></image>
-          <text>{{recommend.temperature}}</text>
+          <text>{{tuijian.temperature}}</text>
         </view>
       </block>
-      <block wx:if="{{recommend.filename}}">
+      <block wx:if="{{tuijian.filename}}">
         <view class="citem_mid">
           <image src="/images/yuyin.png"></image>
-          <text>点爆方式：</text><text>{{recommend.yway}}</text>
+          <text>点爆方式：</text><text>{{tuijian.yway}}</text>
         </view>
         <view class="citem_right">
           <image src="/images/re.png"></image>
-          <text>{{recommend.temperature}}</text>
+          <text>{{tuijian.temperature}}</text>
         </view>
       </block>
     </view>
   </view>
   <!-- 文爆 -->
-  <view class="textbao {{currentTab==1 ? 'show' : 'hide'}}">
-    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
-    wx:for-item="textbao" wx:key="{{textbao._id}}" id="{{textbao.detailId}}" wx:if="{{textbao.text}}">
+  <view class="wenbao {{currentTab==1 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{warray}}" 
+    wx:for-item="wenbao" wx:key="{{wenbao._id}}" id="{{wenbao.detailId}}">
       <view class="citem_left">
-        <image src="/images/tou1.png"></image>
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
       </view>
       <view class="citem_mid">
-        <text>{{textbao.text}}</text>
-        <text>点爆方式：</text><text>{{textbao.wway}}</text>
+        <text>{{wenbao.wtext}}</text>
+        <text>点爆方式：</text><text>{{wenbao.wway}}</text>
       </view>
       <view class="citem_right">
         <image src="/images/re.png"></image>
-        <text>{{textbao.temperature}}</text>
+        <text>{{wenbao.temperature}}</text>
       </view>
     </view>
   </view>
   <!-- 音爆 -->
-  <view class="voicebao {{currentTab==2 ? 'show' : 'hide'}}">
-    <view class="content_item" bindtap="goopen" wx:for="{{tarray}}" 
-    wx:for-item="voicebao" wx:key="{{voicebao._id}}" id="{{voicebao.detailId}}" wx:if="{{voicebao.filename}}">
+  <view class="yinbao {{currentTab==2 ? 'show' : 'hide'}}">
+    <view class="content_item" bindtap="goopen" wx:for="{{yarray}}" 
+    wx:for-item="yinbao" wx:key="{{yinbao._id}}" id="{{yinbao.detailId}}">
       <view class="citem_left">
-        <image src="/images/tou1.png"></image>
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
       </view>
       <view class="citem_mid">
         <image src="/images/yuyin.png"></image>
-        <text>点爆方式：</text><text>{{voicebao.yway}}</text>
+        <text>点爆方式：</text><text>{{yinbao.yway}}</text>
       </view>
       <view class="citem_right">
         <image src="/images/re.png"></image>
-        <text>{{voicebao.temperature}}</text>
+        <text>{{yinbao.temperature}}</text>
       </view>
     </view>
   </view>
   <!-- 爆榜 -->
-  <view class="rankings {{currentTab==3 ? 'show' : 'hide'}}">
+  <view class="baobang {{currentTab==3 ? 'show' : 'hide'}}">
     <view class="content_item" bindtap="goopen" wx:for="{{barray}}" 
-    wx:for-item="rankings" wx:key="{{rankings._id}}" id="{{rankings._id}}">
+    wx:for-item="baobang" wx:key="{{baobang._id}}" id="{{baobang._id}}">
       <view class="number">
         {{index+1}}
       </view>
       <view class="citem_left">
-        <image src="/images/tou1.png"></image>
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
       </view>
-      <block wx:if="{{rankings.text}}">
+      <block wx:if="{{baobang.wtext}}">
         <view class="citem_mid">
-          <text>{{rankings.text}}</text>
-          <text>点爆方式：</text><text>{{rankings.wway}}</text>
+          <text>{{baobang.wtext}}</text>
+          <text>点爆方式：</text><text>{{baobang.wway}}</text>
         </view>
         <view class="citem_right">
           <image src="/images/re.png"></image>
-          <text>{{rankings.temperature}}</text>
+          <text>{{baobang.temperature}}</text>
         </view>
       </block>
-      <block wx:if="{{rankings.filename}}">
+      <block wx:if="{{baobang.filename}}">
         <view class="citem_mid">
           <image src="/images/yuyin.png"></image>
-          <text>点爆方式：</text><text>{{rankings.yway}}</text>
+          <text>点爆方式：</text><text>{{baobang.yway}}</text>
         </view>
         <view class="citem_right">
           <image src="/images/re.png"></image>
-          <text>{{rankings.temperature}}</text>
+          <text>{{baobang.temperature}}</text>
         </view>
       </block>
     </view>

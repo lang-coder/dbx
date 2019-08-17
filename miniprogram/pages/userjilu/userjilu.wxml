@@ -1,0 +1,30 @@
+<view class="content">
+  <view class="tuijian">
+    <view class="content_item" bindtap="goopen" wx:for="{{jarray}}" 
+    wx:for-item="jarray" wx:key="{{jarray._id}}" id="{{jarray.detailId}}">
+      <view class="citem_left">
+        <image src="https://7869-xiedong-87d8e0-1258852857.tcb.qcloud.la/images/tou1.png?sign=447143f4c22ed6f6f27463b961021b51&t=1553083954"></image>
+      </view>
+      <block wx:if="{{jarray.wtext}}">
+        <view class="citem_mid">
+          <text>{{jarray.wtext}}</text>
+          <text>点爆方式：</text><text>{{jarray.wway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{jarray.temperature}}</text>
+        </view>
+      </block>
+      <block wx:if="{{jarray.filename}}">
+        <view class="citem_mid">
+          <image src="/images/yuyin.png"></image>
+          <text>点爆方式：</text><text>{{jarray.yway}}</text>
+        </view>
+        <view class="citem_right">
+          <image src="/images/re.png"></image>
+          <text>{{jarray.temperature}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,5 +1,4 @@
-<!--pages/detail/detail.wxml-->
-<block wx:if="{{detail.text}}">
+<block wx:if="{{detail.wtext}}">
   <view class="the_top">
     <view class="top_left">
       <text space="ensp">性    别：</text>
@@ -13,13 +12,13 @@
       <text>{{detail.wmood}}</text>
       <text>文爆</text>
       <text>{{detail.wway}}</text>
-      <text>{{detail.time}}</text>
+      <text>{{detail.wtime}}</text>
     </view>
   </view>
   <view class="the_mid">
     <scroll-view scroll-y="true" scroll-x="false" scroll-with-animation="true">
       <view>
-        <text>{{detail.text}}</text>
+        <text>{{detail.wtext}}</text>
       </view>
       <block wx:if="{{detail.baofilename}}">
         <view class="yuimage">
@@ -29,17 +28,21 @@
     </scroll-view>
   </view>
     <view class="the_button">
-    <button bindtap="boost">{{boostText}}</button>
+    <button bindtap="zhubao">{{zhubtn}}</button>
   </view>
   <view class="the_bottom">
     <view class="bottom_one">
       <image src="/images/re.png"></image>
       <text>{{temperature}}</text>
     </view>
-    <view class="bottom_two" bindtap="collect">
-      <image src="{{collectimage}}"></image>
-      <text>{{collectText}}</text>
+    <view class="bottom_two" bindtap="shoucang">
+      <image src="{{shouimage}}"></image>
+      <text>{{cang}}</text>
     </view>
+    <!-- <view class="bottom_three">
+      <image src="/images/pinglun.png"></image>
+      <text>评论</text>
+    </view> -->
   </view>
 </block>
 <block wx:if="{{detail.filename}}">
@@ -56,7 +59,7 @@
       <text>{{detail.ymood}}</text>
       <text>音爆</text>
       <text>{{detail.yway}}</text>
-      <text>{{detail.time}}</text>
+      <text>{{detail.wtime}}</text>
     </view>
   </view>
   <view class="the_mid">
@@ -68,16 +71,20 @@
     </view>
   </view>
   <view class="the_button">
-    <button bindtap="boost">{{boostText}}</button>
+    <button bindtap="zhubao">{{zhubtn}}</button>
   </view>
   <view class="the_bottom">
     <view class="bottom_one">
       <image src="/images/re.png"></image>
       <text>{{temperature}}</text>
     </view>
-    <view class="bottom_two" bindtap="collect">
-      <image src="{{collectimage}}"></image>
-      <text>{{collectText}}</text>
+    <view class="bottom_two" bindtap="shoucang">
+      <image src="{{shouimage}}"></image>
+      <text>{{cang}}</text>
     </view>
+    <!-- <view class="bottom_three">
+      <image src="/images/pinglun.png"></image>
+      <text>评论</text>
+    </view> -->
   </view>
 </block>

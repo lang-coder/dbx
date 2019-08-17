@@ -1,0 +1,44 @@
+page{height:100%}
+.user_header{
+  background-color: #FF6666;
+  height: 100%;
+  
+}
+.user_header .header_box{
+  padding: 40rpx 0 0 0;
+  
+}
+.user_header .header_box image{
+  display: block;
+  margin: 0 auto;
+  width: 130rpx;
+  height: 130rpx;
+  border: 12rpx #FF9999 solid;
+  border-radius: 50%;
+}
+.user_header .header_box button{
+  width: 240rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border: none;
+  border-radius: 40rpx;
+  display: block;
+  margin: 40rpx auto 0 auto;
+  background-color: white;
+  color: #6B6B6B;
+}
+.user_header .header_box text{
+  margin-top: 40rpx;
+  width: 240rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border: 2rpx rgb(250, 192, 192) solid;
+  display: block;
+  margin: 40rpx auto 0 auto;
+  background-color: rgb(253, 251, 251);
+  color: #6B6B6B;
+}

@@ -1,13 +1,18 @@
 //index.js
 //获取应用实例
 const app = getApp()
+
 Page({
   data: {
     navber: ['推荐', '文爆', '音爆', '爆榜'],
     currentTab: 0,
     tarray: [],
+    warray: [],
+    yarray: [],
     barray: [],
-    lnum1: 20,//记录当前已有数据数量
+    lnum1: 20,//记录当前已有数据
+    lnum2: 20,
+    lnum3: 20,
     stext: '',
     scrollTop: 0,
   },
@@ -20,9 +25,9 @@ Page({
       currentTab: e.currentTarget.dataset.index
     })
   },
-  search: function (e) {
+  shuru: function (e){
     wx.navigateTo({
-      url: '../search/search'
+      url: '../sousuo/sousuo'
     })
   },
   onLoad: function () {
@@ -32,14 +37,32 @@ Page({
     })
     const db = wx.cloud.database()
     // 推荐数据
-    db.collection('bao').orderBy('time', 'desc').limit(20)
+    db.collection('bao').orderBy('wtime','desc').limit(20)
       .get({
-        success: res => {
+        success:res =>{
           this.setData({
             tarray: res.data
           })
         }
       });
+    // 文爆数据
+    db.collection('baotexts').orderBy('wtime', 'desc').limit(20)
+      .get({
+        success: res => {
+          this.setData({
+            warray: res.data
+          })
+        }
+      });
+    // 音爆数据
+    db.collection('baoyuyins').orderBy('wtime', 'desc').limit(20)
+      .get({
+        success: res => {
+          this.setData({
+            yarray: res.data
+          })
+        }
+      })
     // 排行数据
     db.collection('bao').orderBy('temperature', 'desc').limit(20)
       .get({
@@ -71,7 +94,7 @@ Page({
     })
     const db = wx.cloud.database()
     // 推荐数据
-    db.collection('bao').orderBy('time', 'desc').limit(20)
+    db.collection('bao').orderBy('wtime', 'desc').limit(20)
       .get({
         success: res => {
           this.setData({
@@ -79,6 +102,24 @@ Page({
           })
         }
       });
+    // 文爆数据
+    db.collection('baotexts').orderBy('wtime', 'desc').limit(20)
+      .get({
+        success: res => {
+          this.setData({
+            warray: res.data
+          })
+        }
+      });
+    // 音爆数据
+    db.collection('baoyuyins').orderBy('wtime', 'desc').limit(20)
+      .get({
+        success: res => {
+          this.setData({
+            yarray: res.data
+          })
+        }
+      })
     // 排行数据
     db.collection('bao').orderBy('temperature', 'desc').limit(20)
       .get({
@@ -97,16 +138,19 @@ Page({
     }, 1500);
   },
   //上拉加载
-  thebottom: function () {
+  thebottom: function(){
+    
     var lnum1 = this.data.lnum1
+    var lnum2 = this.data.lnum2
+    var lnum3 = this.data.lnum3
     const db = wx.cloud.database()
-    if (this.data.currentTab == 0) {
+    if (this.data.currentTab == 0){
       // 显示加载图标
       wx.showLoading({
         title: '玩命加载中',
       })
       // 推荐数据
-      db.collection('bao').orderBy('wtime', 'desc').skip(lnum1).limit(10)
+      db.collection('bao').orderBy('wtime', 'desc').skip(lnum1)
         .get({
           success: res => {
             this.setData({
@@ -117,6 +161,45 @@ Page({
             wx.hideLoading()
           }
         });
+    }
+    if (this.data.currentTab == 1) {
+      wx.showLoading({
+        title: '玩命加载中',
+      })
+      // 文爆数据
+      db.collection('baotexts').orderBy('wtime', 'desc').skip(lnum2)
+        .get({
+          success: res => {
+            this.setData({
+              warray: this.data.warray.concat(res.data),
+              lnum2: lnum2 + 10
+            })
+            wx.hideLoading()
+          }
+        });
+    }
+    if (this.data.currentTab == 2) {
+      wx.showLoading({
+        title: '玩命加载中',
+      })
+      // 音爆数据
+      db.collection('baoyuyins').orderBy('wtime', 'desc').skip(lnum3)
+        .get({
+          success: res => {
+            this.setData({
+              yarray: this.data.yarray.concat(res.data),
+              lnum3: lnum3 + 10
+            })
+            wx.hideLoading()
+          }
+        })
+    }
+  },
+  //分享
+  onShareAppMessage: function () {
+    return {
+      title: '我要点爆',
+      path: '/pages/index/index?id=' + '123',
     }
   }
 })

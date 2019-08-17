@@ -1,0 +1,7 @@
+<view class="user_header">
+  <view class="header_box">
+    <image src="/images/bao1.png"></image>
+    <button bindtap="qiandao">{{qian}}</button>
+    <text>糖果数：{{userTang}}</text>
+  </view>
+</view>

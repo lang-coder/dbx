@@ -1,0 +1,104 @@
+.header{
+  background-color: #FF3333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.header label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  position: relative;
+}
+.header label input{
+  flex: 1;
+  background-color: white;
+  height: 60rpx;
+  border-radius: 26rpx;
+  font-size: 34rpx;
+  padding: 4rpx 80rpx 4rpx 20rpx;
+}
+.header icon{
+  position: absolute;
+  right: 40rpx;
+  top: 18rpx;
+  z-index: 100;
+}
+/* content */
+.nohave{
+  font-size: 40rpx;
+  color: #c5c5c5;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.content{
+  width: 100%;
+  margin-top: 100rpx;
+}
+.content .content_item{
+  display: flex;
+  height: 120rpx;
+  padding: 20rpx 30rpx;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2rpx silver solid;
+}
+.content_item .number{
+  padding: 0 10rpx 0 0;
+  color: #FF0033;
+  font-size: 24rpx;
+}
+.content .content_item .citem_left{
+  width: 100rpx;
+}
+.citem_left image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.content .content_item .citem_mid{
+  width: 480rpx;
+  /* flex: 1; */
+  padding: 0 30rpx;
+}
+.citem_mid image{
+  display: block;
+  width: 160rpx;
+  height: 48rpx;
+}
+.citem_mid text:first-child{
+  width: 400rpx;
+  display: block;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.citem_mid text:not(:first-child){
+  display: inline-block;
+  color: #363636;
+  font-size: 20rpx;
+  line-height: 20rpx;
+}
+.content .content_item .citem_right{
+  text-align: center;
+  width: 100rpx;
+  right: 0;
+}
+.citem_right image{
+  width: 38rpx;
+  height: 46rpx;
+  margin: 0 auto;
+  display: block;
+}
+.citem_right text{
+  color: #FF0033;
+  font-size: 18rpx;
+}

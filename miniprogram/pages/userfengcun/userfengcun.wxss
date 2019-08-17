@@ -1,0 +1,47 @@
+.history{
+  min-height: 2000px;
+  display: block;
+  background: url(data:image/gif;base64,R0lGODlhAgACAIAAALDnqF7LTCH5BAAAAAAALAAAAAACAAIAAAICDFwAOw==) repeat-y 130px 0;
+  overflow: hidden;
+  position: relative;
+}
+.history-date{
+  display: flex;
+}
+.history-date text{
+  display: block;
+}
+.date_left{
+  position: absolute;
+  left: 160rpx;
+}
+.date_left view{
+    height: 80rpx;
+    line-height: 80px;
+    margin: 44rpx 0;
+}
+.date_left text{
+  font-size: 26rpx;
+  color: #FFFFFF;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* margin-top: 96rpx; */
+  text-align: center;
+  background-color: #1db702;
+  border-radius: 50%;
+}
+.date_right{
+  position: absolute;
+  left: 320rpx;
+}
+.date_right text{
+  font-size: 28rpx;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 2rpx #BCBCBC solid;
+  /* margin-top: 80rpx; */
+  margin: 40rpx 0;
+}
